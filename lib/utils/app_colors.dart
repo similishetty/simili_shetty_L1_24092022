@@ -9,4 +9,7 @@ class AppColors{
   static Color primaryButtonColor = const Color(0xFFEE8D34);
   static Color buttonHover = const Color(0xFFF5BB78);
   static Color dividerColor = const Color(0xFFDFDFDE);
+  static Color transparent = const Color(0x00000000);
+  static Color hintText = const Color(0xFFBDBDBD);
+  static Color grey = const Color(0xFF8F8F8F);
 }

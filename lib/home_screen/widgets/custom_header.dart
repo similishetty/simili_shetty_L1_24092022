@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:simili_shetty_l1_24092022/common_widget/custom_button_with_bg.dart';
+import 'package:simili_shetty_l1_24092022/home_screen/repository/app_bar_action_listner.dart';
 import 'package:simili_shetty_l1_24092022/utils/app_colors.dart';
 import 'package:simili_shetty_l1_24092022/utils/app_data.dart';
 import 'package:simili_shetty_l1_24092022/home_screen/widgets/responsive_widget.dart';
@@ -31,7 +33,7 @@ class _CustomHeadersState extends State<CustomHeaders> {
 
   Widget buildHeader(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children:  [
         buildLogo(),
         buildHeaderLinks(),
@@ -42,16 +44,37 @@ class _CustomHeadersState extends State<CustomHeaders> {
  Widget buildHeaderActions(BuildContext context) {
     return Row(
       children: [
-        if (ResponsiveWidget.isSmallScreen(context)) buildActionButton(icon: Icons.menu),
-        buildActionButton(icon: Icons.search),
-        buildActionButton(icon: Icons.shopping_cart),
-        buildActionButton(icon: Icons.person)
+        if (ResponsiveWidget.isSmallScreen(context)) CustomButtonWithBg(icon: Icons.menu,onTap: (){
+          AppBarActionNotifier.updateAppBarAction("menu");
+        },),
+        CustomButtonWithBg(icon: Icons.search,onTap: (){
+         AppBarActionNotifier.updateAppBarAction("search");
+        },),
+        CustomButtonWithBg(icon: Icons.shopping_cart,onTap: (){
+          AppBarActionNotifier.updateAppBarAction("cart");
+        },),
+        CustomButtonWithBg(icon: Icons.person,onTap: (){
+          AppBarActionNotifier.updateAppBarAction("login");
+        },),
+
       ],
     );
  }
 
   Widget buildLogo() {
-    return Text(AppData.headerTitle,style: TextStyle(color: AppColors.headerTitle,fontWeight: FontWeight.bold,fontSize: 20),);
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(Icons.shopping_bag,color: AppColors.primaryButtonColor,
+          size: 24
+        ),
+        Text(AppData.headerTitle,
+          style: TextStyle(
+            color: AppColors.headerTitle,
+            fontWeight: FontWeight.w600,
+            fontSize: 20),)
+      ],
+    );
 
   }
 

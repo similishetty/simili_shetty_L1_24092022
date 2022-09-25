@@ -6,7 +6,7 @@ import '../utils/app_colors.dart';
 class  CustomOutlinedButton extends StatefulWidget {
 
   const CustomOutlinedButton({Key? key,required this.buttonTitle}) : super(key: key);
-  final buttonTitle;
+  final String buttonTitle;
   @override
   _CustomOutlinedButtonState createState() => _CustomOutlinedButtonState();
 }
@@ -17,7 +17,7 @@ class _CustomOutlinedButtonState extends State<CustomOutlinedButton> {
   Widget build(BuildContext context) {
     return OutlinedButton(
           style: OutlinedButton.styleFrom(
-            backgroundColor: onHover? AppColors.buttonHover:AppColors.white,
+            backgroundColor: onHover? AppColors.primaryButtonColor:AppColors.white,
             padding: const EdgeInsets.all(15),
             side:  BorderSide(width: 1.0, color: AppColors.headerLinks),
           ),

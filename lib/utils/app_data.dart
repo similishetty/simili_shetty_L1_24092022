@@ -3,12 +3,14 @@ class AppData{
   static String headerTitle = "Groco";
   static String freshAndOrganicProductsForYou = "Fresh And Organic Products For You";
   static String loremSubTitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  static String loremSubTitle2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod";
   static String ourText = "Our";
   static String customerText = "Customer's";
   static String productText = "Products";
   static String featuresText = "Features";
   static String categoriesText = "Categories";
   static String reviewText = "Review";
+  static String blogsText = "Blogs";
   static List<String> featuresTitle = ["Fresh And Organic","Free Delivery","Easy Payments"];
   static List<String> productTile = ["Fresh Orange","Fresh Onion","Fresh Meat","Fresh Cabbage","Fresh Potato","Fresh Avocado","Fresh Carrot","Green Lemon"];
   static List<String> categoriesTitle = ["Organic Vegetables","Fresh Fruits","Dairy Products", "Fresh Meat"];
@@ -28,6 +30,15 @@ class AppData{
   static String newsletter = "Newsletter";
   static String subscribeText = "Subscribe";
   static String subscribeTitle = "Subscribe For Latest Updates";
-
+  static String searchHere = "search here...";
+  static List<String> cartItem = ["Watermelon","Onion","Chicken"];
+  static String checkout = "Checkout";
+  static String loginNow = "Login Now";
+  static String emailHintText = "email";
+  static String yourEmailHintText = "your email";
+  static String passwordHintText = "password";
+  static String dontHaveAccount = "Don't Have An Account";
+  static String createNow = "Create Now!";
+  static String shopNow = "Shop Now";
 
 }
